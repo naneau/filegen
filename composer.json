@@ -1,0 +1,25 @@
+{
+    "name": "naneau/filegen",
+    "description": "A PHP File and Directory Generating Tool",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maurice Fonk",
+            "email": "npm@naneau.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Naneau\\FileGen\\": "src/Naneau/FileGen",
+            "Naneau\\FileGen\\Test\\": "tests/Naneau/FileGen/Test"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "twig/twig": "~1",
+        "symfony/filesystem": "~2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4"
+    }
+}
