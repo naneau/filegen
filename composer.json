@@ -16,10 +16,13 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "twig/twig": "~1",
         "symfony/filesystem": "~2"
     },
     "require-dev": {
+        "twig/twig": "~1",
         "phpunit/phpunit": "~4"
+    },
+    "suggest": {
+        "twig/twig": "Allows for templated files"
     }
 }
