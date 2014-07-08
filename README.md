@@ -17,3 +17,4 @@ $structure
 // Generate the structure
 $generator = new Generator('/output/directory');
 $generator->generate($structure);
+```
