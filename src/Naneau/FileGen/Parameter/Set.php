@@ -43,11 +43,13 @@ class Set implements Iterator
      *
      * @param  string $name        name of the parameter
      * @param  string $description (optional) human readable description
-     * @return void
+     * @return Set
      **/
     public function add($name, $description = null)
     {
         $this->parameters[] = new Parameter($name, $description);
+
+        return $this;
     }
 
     /**
