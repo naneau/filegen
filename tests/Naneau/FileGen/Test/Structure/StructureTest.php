@@ -7,18 +7,13 @@
  * @subpackage      Tests
  */
 
-namespace Naneau\FileGen\Test;
-
-use Naneau\FileGen\Test\TestCase;
+namespace Naneau\FileGen\Test\Structure;
 
 use Naneau\FileGen\Structure;
 use Naneau\FileGen\Directory;
 use Naneau\FileGen\File;
-use Naneau\FileGen\Generator;
 
-use \RecursiveDirectoryIterator;
-use \RecursiveIteratorIterator;
-use \FilesystemIterator;
+use \PHPUnit_Framework_TestCase as PUTestCase;
 
 /**
  * StructureTest
@@ -29,7 +24,7 @@ use \FilesystemIterator;
  * @package         FileGen
  * @subpackage      Tests
  */
-class StructureTest extends TestCase
+class StructureTest extends PUTestCase
 {
     /**
      * @return void

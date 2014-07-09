@@ -9,7 +9,7 @@
 
 namespace Naneau\FileGen\Test\File;
 
-use Naneau\FileGen\Test\TestCase;
+use Naneau\FileGen\Test\Generator\TestCase;
 
 use Naneau\FileGen\Structure;
 use Naneau\FileGen\File\Contents\Twig as TwigContents;

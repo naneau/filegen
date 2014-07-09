@@ -9,7 +9,7 @@
 
 namespace Naneau\FileGen\Test;
 
-use Naneau\FileGen\Test\TestCase;
+use Naneau\FileGen\Test\Generator\TestCase;
 
 use Naneau\FileGen\File\Contents\Copy as CopyContents;
 use Naneau\FileGen\Structure;

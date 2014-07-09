@@ -7,9 +7,9 @@
  * @subpackage      Tests
  */
 
-namespace Naneau\FileGen\Test;
+namespace Naneau\FileGen\Test\Generator;
 
-use Naneau\FileGen\Test\TestCase;
+use Naneau\FileGen\Test\Generator\TestCase;
 
 use Naneau\FileGen\Structure;
 use Naneau\FileGen\Directory;

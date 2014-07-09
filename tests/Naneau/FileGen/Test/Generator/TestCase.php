@@ -7,7 +7,7 @@
  * @subpackage      Tests
  */
 
-namespace Naneau\FileGen\Test;
+namespace Naneau\FileGen\Test\Generator;
 
 use Naneau\FileGen\Directory;
 use Naneau\FileGen\File;
@@ -100,7 +100,7 @@ class TestCase extends PUTestCase
      **/
     protected function getTestsRoot()
     {
-        return realpath(__DIR__ . '/../../../');
+        return realpath(__DIR__ . '/../../../../');
     }
 
     /**
