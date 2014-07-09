@@ -9,11 +9,9 @@
 
 namespace Naneau\FileGen\Test;
 
-use Naneau\FileGen\Structure;
 use Naneau\FileGen\Directory;
 use Naneau\FileGen\File;
 use Naneau\FileGen\Generator;
-use Naneau\FileGen\File\Template as TemplatedFile;
 
 use \PHPUnit_Framework_TestCase as PUTestCase;
 
@@ -74,7 +72,7 @@ class TestCase extends PUTestCase
     /**
      * Set the creation root
      *
-     * @param string $rootDir
+     * @param  string   $rootDir
      * @return TestCase
      */
     public function setRootDir($rootDir)
@@ -87,11 +85,12 @@ class TestCase extends PUTestCase
     /**
      * Create a new generator
      *
+     * @param  array[string]string $parameters
      * @return Generator
      **/
-    protected function createGenerator()
+    protected function createGenerator(array $parameters = array())
     {
-        return new Generator($this->getRootDir());
+        return new Generator($this->getRootDir(), $parameters);
     }
 
     /**
@@ -107,7 +106,7 @@ class TestCase extends PUTestCase
     /**
      * Delete a directory
      *
-     * @param string $dir
+     * @param  string $dir
      * @return void
      **/
     private static function deleteDir($dir)

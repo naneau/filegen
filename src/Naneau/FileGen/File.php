@@ -9,6 +9,8 @@
 
 namespace Naneau\FileGen;
 
+use Naneau\FileGen\Parameterized;
+
 use Naneau\FileGen\AccessRights;
 
 use Naneau\FileGen\File\Contents as ContentGenerator;
@@ -52,10 +54,20 @@ class File extends AccessRights
     /**
      * Get the contents as a string
      *
+     * @param  array[string]string $parameters
      * @return string
      **/
-    public function getContents()
+    public function getContents(array $parameters = array())
     {
+        // Merge incoming parameters with that of the content generator if the
+        // content generator is parameterized
+        if ($this->getContentGenerator() instanceof Parameterized) {
+            $this->getContentGenerator()->setParameters(array_merge(
+                $this->getContentGenerator()->getParameters(),
+                $parameters
+            ));
+        }
+
         return $this->getContentGenerator()->getContents();
     }
 

@@ -9,6 +9,8 @@
 
 namespace Naneau\FileGen;
 
+use Naneau\FileGen\Parameterized;
+
 use Naneau\FileGen\Directory;
 use Naneau\FileGen\File;
 use Naneau\FileGen\SymLink;
@@ -30,7 +32,7 @@ use \InvalidArgumentException;
  * @package         FileGen
  * @subpackage      Generator
  */
-class Generator
+class Generator implements Parameterized
 {
     /**
      * Root of the generation
@@ -38,6 +40,13 @@ class Generator
      * @var string
      **/
     private $root;
+
+    /**
+     * The parameters
+     *
+     * @var array[string][string]
+     **/
+    private $parameters;
 
     /**
      * The symfony filesystem
@@ -49,29 +58,100 @@ class Generator
     /**
      * Constructor
      *
-     * @param  string $root
+     * @param  string              $root
+     * @param  array[string]string $parameters
      * @return void
      **/
-    public function __construct($root)
+    public function __construct($root, array $parameters = array())
     {
         $this
             ->setRoot($root)
+            ->setParameters($parameters)
             ->setFilesystem(new Filesystem);
     }
 
     /**
-     * Generate a directory's structure on disk
+     * Generate a Structure on disk
      *
-     * @param  Directory $directory
+     * @param  Structure $directory
      * @return bool
      **/
-    public function generate(Directory $directory)
+    public function generate(Structure $structure)
     {
-        foreach ($directory as $node) {
+        foreach ($structure as $node) {
             $this->createNode($node);
         }
 
         return true;
+    }
+
+    /**
+     * Get the root directory
+     *
+     * @return string
+     */
+    public function getRoot()
+    {
+        return $this->root;
+    }
+
+    /**
+     * Set the root directory
+     *
+     * @param  string    $root
+     * @return Generator
+     */
+    public function setRoot($root)
+    {
+        $this->root = $root;
+
+        return $this;
+    }
+
+    /**
+     * Get the parameters
+     *
+     * @return array[string]string
+     */
+    public function getParameters()
+    {
+        return $this->parameters;
+    }
+
+    /**
+     * Set the parameters
+     *
+     * @param  array[string]string $parameters
+     * @return Generator
+     */
+    public function setParameters(array $parameters)
+    {
+        $this->parameters = $parameters;
+
+        return $this;
+    }
+
+    /**
+     * Get the file system
+     *
+     * @return Filesystem
+     */
+    public function getFilesystem()
+    {
+        return $this->fileSystem;
+    }
+
+    /**
+     * Set the file system
+     *
+     * @param  Filesystem $fileSystem
+     * @return Generator
+     */
+    public function setFilesystem(Filesystem $fileSystem)
+    {
+        $this->fileSystem = $fileSystem;
+
+        return $this;
     }
 
     /**
@@ -102,52 +182,6 @@ class Generator
     }
 
     /**
-     * Get the root directory
-     *
-     * @return string
-     */
-    public function getRoot()
-    {
-        return $this->root;
-    }
-
-    /**
-     * Set the root directory
-     *
-     * @param  string    $root
-     * @return Generator
-     */
-    public function setRoot($root)
-    {
-        $this->root = $root;
-
-        return $this;
-    }
-
-    /**
-     * Get the file system
-     *
-     * @return Filesystem
-     */
-    public function getFilesystem()
-    {
-        return $this->fileSystem;
-    }
-
-    /**
-     * Set the file system
-     *
-     * @param  Filesystem $fileSystem
-     * @return Generator
-     */
-    public function setFilesystem(Filesystem $fileSystem)
-    {
-        $this->fileSystem = $fileSystem;
-
-        return $this;
-    }
-
-    /**
      * Create a file
      *
      * @param  File $file
@@ -158,15 +192,15 @@ class Generator
         // Full path to the file
         $fullPath = $this->getNodePath($file);
 
+        // Generate contents
+        $contents = $file->getContents($this->getParameters());
+
         try {
             if ($file->hasMode()) {
-                $this->getFilesystem()->dumpFile(
-                    $fullPath,
-                    $file->getContents(),
-                    $file->getMode()
-                );
+                $mode = $file->getMode();
+                $this->getFilesystem()->dumpFile($fullPath, $contents, $mode);
             } else {
-                $this->getFilesystem()->dumpFile($fullPath, $file->getContents());
+                $this->getFilesystem()->dumpFile($fullPath, $contents);
             }
         } catch (FilesystemIOException $filesystemException) {
             throw new GeneratorException(

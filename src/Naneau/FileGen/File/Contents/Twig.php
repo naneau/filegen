@@ -10,6 +10,7 @@
 namespace Naneau\FileGen\File\Contents;
 
 use Naneau\FileGen\File\Contents as FileContents;
+use Naneau\FileGen\Parameterized;
 
 use \Twig_TemplateInterface as TwigTemplate;
 
@@ -22,7 +23,7 @@ use \Twig_TemplateInterface as TwigTemplate;
  * @package         FileGen
  * @subpackage      File
  */
-class Twig implements FileContents
+class Twig implements FileContents, Parameterized
 {
     /**
      * The twig template
@@ -41,15 +42,15 @@ class Twig implements FileContents
     /**
      * Constructor
      *
-     * @param TwigTemplate $template
-     * @param array $parameters
+     * @param  TwigTemplate $template
+     * @param  array        $parameters
      * @return void
      **/
     public function __construct(TwigTemplate $template, array $parameters = array())
     {
         $this
             ->setTemplate($template)
-            ->setParamaters($parameters);
+            ->setParameters($parameters);
     }
 
     /**
@@ -59,7 +60,7 @@ class Twig implements FileContents
      **/
     public function getContents()
     {
-        return $this->getTemplate()->render($this->getParamaters());
+        return $this->getTemplate()->render($this->getParameters());
     }
 
     /**
@@ -75,7 +76,7 @@ class Twig implements FileContents
     /**
      * Set the template
      *
-     * @param TwigTemplate $template
+     * @param  TwigTemplate $template
      * @return Twig
      */
     public function setTemplate(TwigTemplate $template)
@@ -88,9 +89,9 @@ class Twig implements FileContents
     /**
      * Get the parameters
      *
-     * @return array
+     * @return array[string]string
      */
-    public function getParamaters()
+    public function getParameters()
     {
         return $this->parameters;
     }
@@ -98,10 +99,10 @@ class Twig implements FileContents
     /**
      * Set the parameters
      *
-     * @param array $parameters
+     * @param  array[string]string $parameters
      * @return Twig
      */
-    public function setParamaters(array $parameters)
+    public function setParameters(array $parameters)
     {
         $this->parameters = $parameters;
 
