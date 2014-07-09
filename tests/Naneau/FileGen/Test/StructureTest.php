@@ -82,4 +82,38 @@ class StructureTest extends TestCase
             ->file('foo', 'bar contents')
             ->file('foo/baz', 'baz contents');
     }
+
+    /**
+     * @return void
+     **/
+    public function testParameterDefinition()
+    {
+        // Note leading slashes in some
+        $structure = new Structure;
+        $structure
+            // Throw in a file and directory
+            ->directory('foo')
+            ->file('bar')
+
+            // Simple parameters
+            ->parameter('foo', 'The foo parameter')
+            ->parameter('bar', 'The bar parameter');
+
+        $this->assertInstanceOf(
+            'Naneau\FileGen\Directory',
+            $structure->scan('foo')
+        );
+        $this->assertInstanceOf(
+            'Naneau\FileGen\File',
+            $structure->scan('bar')
+        );
+        $this->assertInstanceOf(
+            'Naneau\FileGen\Parameter\Parameter',
+            $structure->getParameterDefinition()->get('foo')
+        );
+        $this->assertInstanceOf(
+            'Naneau\FileGen\Parameter\Parameter',
+            $structure->getParameterDefinition()->get('bar')
+        );
+    }
 }

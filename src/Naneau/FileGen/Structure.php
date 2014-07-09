@@ -13,6 +13,9 @@ use Naneau\FileGen\Directory;
 use Naneau\FileGen\File;
 use Naneau\FileGen\SymLink;
 
+use Naneau\FileGen\Parameter\Set as ParameterSet;
+use Naneau\FileGen\Parameter\Parameter;
+
 use Naneau\FileGen\Structure\Exception as StructureException;
 
 /**
@@ -27,6 +30,13 @@ use Naneau\FileGen\Structure\Exception as StructureException;
 class Structure extends Directory
 {
     /**
+     * The parameter definition
+     *
+     * @var ParameterSet
+     **/
+    private $parameterDefinition;
+
+    /**
      * Constructor
      *
      * @return void
@@ -36,6 +46,9 @@ class Structure extends Directory
         // Although the root node (Structure) is a directory, it does not  have
         // a "name", relative to the root
         parent::__construct('');
+
+        // Initialize the parameter definition
+        $this->setParameterDefinition(new ParameterSet);
     }
 
     /**
@@ -46,7 +59,7 @@ class Structure extends Directory
      * @param  int                 $mode     mode in octal 0XXX
      * @return Structure
      **/
-    public function file($name, $contents, $mode = null)
+    public function file($name, $contents = '', $mode = null)
     {
         // Create the file itself
         $file = new File(basename($name), $contents, $mode);
@@ -89,6 +102,43 @@ class Structure extends Directory
 
         $parent = $this->parentDirectory($to);
         $parent->addChild($link);
+
+        return $this;
+    }
+
+    /**
+     * Add a parameter
+     *
+     * @param  string $name        name of the parameter
+     * @param  string $description (optional) human readable description
+     * @return Structure
+     **/
+    public function parameter($name, $description = null)
+    {
+        $this->getParameterDefinition()->add($name, $description);
+
+        return $this;
+    }
+
+    /**
+     * Get the parameter definition
+     *
+     * @return ParameterSet
+     */
+    public function getParameterDefinition()
+    {
+        return $this->parameterDefinition;
+    }
+
+    /**
+     * Set the parameter definition
+     *
+     * @param ParameterSet $parameterDefinition
+     * @return Structure
+     */
+    public function setParameterDefinition(ParameterSet $parameterDefinition)
+    {
+        $this->parameterDefinition = $parameterDefinition;
 
         return $this;
     }
