@@ -20,9 +20,11 @@
     },
     "require-dev": {
         "twig/twig": "~1",
-        "phpunit/phpunit": "~4"
+        "phpunit/phpunit": "~4",
+        "symfony/console": "~2"
     },
     "suggest": {
-        "twig/twig": "Allows for templated files"
+        "twig/twig": "Allows for templated files",
+        "symfony/console": "Add console command generation with parameters"
     }
 }
