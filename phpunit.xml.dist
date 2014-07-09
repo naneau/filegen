@@ -7,4 +7,10 @@
          cacheTokens="false"
          colors="true"
          >
+
+    <testsuites>
+        <testsuite name="FileGen Test Squite">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
 </phpunit>
