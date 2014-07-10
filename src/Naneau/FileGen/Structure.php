@@ -14,7 +14,6 @@ use Naneau\FileGen\File;
 use Naneau\FileGen\SymLink;
 
 use Naneau\FileGen\Parameter\Set as ParameterSet;
-use Naneau\FileGen\Parameter\Parameter;
 
 use Naneau\FileGen\Structure\Exception as StructureException;
 
@@ -109,8 +108,8 @@ class Structure extends Directory
     /**
      * Add a parameter
      *
-     * @param  string $name        name of the parameter
-     * @param  string $description (optional) human readable description
+     * @param  string    $name        name of the parameter
+     * @param  string    $description (optional) human readable description
      * @return Structure
      **/
     public function parameter($name, $description = null)
@@ -133,7 +132,7 @@ class Structure extends Directory
     /**
      * Set the parameter definition
      *
-     * @param ParameterSet $parameterDefinition
+     * @param  ParameterSet $parameterDefinition
      * @return Structure
      */
     public function setParameterDefinition(ParameterSet $parameterDefinition)
