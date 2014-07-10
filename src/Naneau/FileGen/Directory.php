@@ -9,6 +9,8 @@
 
 namespace Naneau\FileGen;
 
+use Naneau\FileGen\Exception as FileGenException;
+
 use Naneau\FileGen\AccessRights;
 
 use \Iterator;
@@ -144,7 +146,7 @@ class Directory extends AccessRights implements Iterator
             }
         }
 
-        throw new RuntimeException(sprintf(
+        throw new FileGenException(sprintf(
             'Node "%s" not found',
             $name
         ));
