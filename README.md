@@ -16,11 +16,21 @@ $structure = new Structure;
 $structure
     ->directory('foo')
     ->file('bar/baz', 'these are the file contents');
-    ->link('/some/file/on/disk', 'qux');
+    ->link('/some/file/somewhere', 'qux');
 
 // Generate the structure
 $generator = new Generator('/output/directory');
 $generator->generate($structure);
+```
+
+will output:
+
+```
+- /output/directory/
+    - foo/
+    - bar/
+        - baz
+    - qux => /some/file/somewhere
 ```
 
 ## Examples
