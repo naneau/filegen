@@ -162,7 +162,8 @@ class Structure extends Directory
         $directories = explode(DIRECTORY_SEPARATOR, $parentPath);
 
         $parent = $this;
-        for ($x = 0; $x < count($directories); $x++) {
+        $dirCount = count($directories);
+        for ($x = 0; $x < $dirCount; $x++) {
 
             // Going through directories, highest level first
             $directory = $directories[$x];
