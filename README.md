@@ -1,6 +1,9 @@
 # FileGen
 
+[![Build Status](https://travis-ci.org/naneau/filegen.svg?branch=master)](https://travis-ci.org/naneau/filegen)
+
 A small tool to aid in the creation of (complicated) file and directory
+
 layouts.
 
 ```php
