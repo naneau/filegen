@@ -1,6 +1,6 @@
 <?php
 /**
- * String.php
+ * StringBased.php
  *
  * @category        Naneau
  * @package         FileGen
@@ -12,7 +12,7 @@ namespace Naneau\FileGen\File\Contents;
 use Naneau\FileGen\File\Contents;
 
 /**
- * String
+ * StringBased
  *
  * String based file contents
  *
@@ -20,7 +20,7 @@ use Naneau\FileGen\File\Contents;
  * @package         FileGen
  * @subpackage      File
  */
-class String implements Contents
+class StringBased implements Contents
 {
     /**
      * Contents of the file
@@ -54,7 +54,7 @@ class String implements Contents
      * Set the contents of the file
      *
      * @param  ContentGenerator|string $contents
-     * @return String
+     * @return self
      */
     public function setContents($contents)
     {

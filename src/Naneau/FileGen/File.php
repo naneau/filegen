@@ -14,7 +14,7 @@ use Naneau\FileGen\Parameterized;
 use Naneau\FileGen\AccessRights;
 
 use Naneau\FileGen\File\Contents as ContentGenerator;
-use Naneau\FileGen\File\Contents\String as StringContents;
+use Naneau\FileGen\File\Contents\StringBased as StringContents;
 
 use \InvalidArgumentException;
 
