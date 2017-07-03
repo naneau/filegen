@@ -12,7 +12,7 @@ namespace Naneau\FileGen\File\Contents;
 use Naneau\FileGen\File\Contents as FileContents;
 use Naneau\FileGen\Parameterized;
 
-use \Twig_TemplateInterface as TwigTemplate;
+use \Twig_TemplateWrapper as TwigTemplate;
 
 /**
  * Twig

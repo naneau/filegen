@@ -16,12 +16,12 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "symfony/filesystem": "~2"
+        "symfony/filesystem": "~3"
     },
     "require-dev": {
-        "twig/twig": "~1",
-        "phpunit/phpunit": "~5.5",
-        "symfony/console": "~2"
+        "twig/twig": "~2",
+        "phpunit/phpunit": "~6",
+        "symfony/console": "~3"
     },
     "suggest": {
         "twig/twig": "Allows for templated files",

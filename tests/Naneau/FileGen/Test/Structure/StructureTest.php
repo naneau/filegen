@@ -13,8 +13,6 @@ use Naneau\FileGen\Structure;
 use Naneau\FileGen\Directory;
 use Naneau\FileGen\File;
 
-use \PHPUnit_Framework_TestCase as PUTestCase;
-
 /**
  * StructureTest
  *
@@ -24,7 +22,7 @@ use \PHPUnit_Framework_TestCase as PUTestCase;
  * @package         FileGen
  * @subpackage      Tests
  */
-class StructureTest extends PUTestCase
+class StructureTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @return void

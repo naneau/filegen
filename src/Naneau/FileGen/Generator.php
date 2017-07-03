@@ -196,11 +196,9 @@ class Generator implements Parameterized
         $contents = $file->getContents($this->getParameters());
 
         try {
+            $this->getFilesystem()->dumpFile($fullPath, $contents);
             if ($file->hasMode()) {
-                $mode = $file->getMode();
-                $this->getFilesystem()->dumpFile($fullPath, $contents, $mode);
-            } else {
-                $this->getFilesystem()->dumpFile($fullPath, $contents);
+                $this->getFilesystem()->chmod($fullPath, $file->getMode());
             }
         } catch (FilesystemIOException $filesystemException) {
             throw new GeneratorException(

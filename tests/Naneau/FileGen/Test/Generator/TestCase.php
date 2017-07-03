@@ -13,8 +13,6 @@ use Naneau\FileGen\Directory;
 use Naneau\FileGen\File;
 use Naneau\FileGen\Generator;
 
-use \PHPUnit_Framework_TestCase as PUTestCase;
-
 use \RecursiveDirectoryIterator;
 use \RecursiveIteratorIterator;
 use \FilesystemIterator;
@@ -28,7 +26,7 @@ use \FilesystemIterator;
  * @package         FileGen
  * @subpackage      Tests
  */
-class TestCase extends PUTestCase
+class TestCase extends \PHPUnit\Framework\TestCase
 {
     /**
      * Root dir for tests

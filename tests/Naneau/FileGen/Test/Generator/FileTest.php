@@ -9,8 +9,6 @@
 
 namespace Naneau\FileGen\Test\Generator;
 
-use Naneau\FileGen\Test\Generator\TestCase;
-
 use Naneau\FileGen\Structure;
 use Naneau\FileGen\File;
 use Naneau\FileGen\Generator;
@@ -24,7 +22,7 @@ use Naneau\FileGen\Generator;
  * @package         FileGen
  * @subpackage      Tests
  */
-class FileTest extends TestCase
+class FileTest extends \Naneau\FileGen\Test\Generator\TestCase
 {
     /**
      * Test simple creation

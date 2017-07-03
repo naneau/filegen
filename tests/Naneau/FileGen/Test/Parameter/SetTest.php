@@ -12,8 +12,6 @@ namespace Naneau\FileGen\Test\Parameter;
 use Naneau\FileGen\Parameter\Set as ParameterSet;
 use Naneau\FileGen\Parameter\Parameter;
 
-use \PHPUnit_Framework_TestCase as PUTestCase;
-
 /**
  * SetTest
  *
@@ -21,7 +19,7 @@ use \PHPUnit_Framework_TestCase as PUTestCase;
  * @package         FileGen
  * @subpackage      Tests
  */
-class SetTest extends PUTestCase
+class SetTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Test add/get

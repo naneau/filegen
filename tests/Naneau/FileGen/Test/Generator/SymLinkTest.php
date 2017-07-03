@@ -9,8 +9,6 @@
 
 namespace Naneau\FileGen\Test\Generator;
 
-use Naneau\FileGen\Test\Generator\TestCase;
-
 use Naneau\FileGen\Structure;
 use Naneau\FileGen\Directory;
 use Naneau\FileGen\File;
@@ -29,7 +27,7 @@ use \FilesystemIterator;
  * @package         FileGen
  * @subpackage      Tests
  */
-class SymLinkTest extends TestCase
+class SymLinkTest extends \Naneau\FileGen\Test\Generator\TestCase
 {
     /**
      * Test simple creation

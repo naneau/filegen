@@ -21,8 +21,6 @@ use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Helper\HelperSet;
 use Symfony\Component\Console\Tester\CommandTester;
 
-use \PHPUnit_Framework_TestCase as PUTestCase;
-
 /**
  * ParameterHelperTest
  *
@@ -32,7 +30,7 @@ use \PHPUnit_Framework_TestCase as PUTestCase;
  * @package         FileGen
  * @subpackage      Test
  */
-class ParameterHelperTest extends PUTestCase
+class ParameterHelperTest extends \PHPUnit\Framework\TestCase
 {
     public function testExecute()
     {
