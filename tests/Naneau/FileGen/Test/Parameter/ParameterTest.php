@@ -1,24 +1,9 @@
 <?php
-/**
- * ParameterTest.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Tests
- */
-
 namespace Naneau\FileGen\Test\Parameter;
 
 use Naneau\FileGen\Parameter\Set as ParameterSet;
 use Naneau\FileGen\Parameter\Parameter;
 
-/**
- * ParameterTest
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Tests
- */
 class ParameterTest extends \PHPUnit\Framework\TestCase
 {
     /**

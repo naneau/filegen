@@ -1,12 +1,4 @@
 <?php
-/**
- * SymLinkTest.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Tests
- */
-
 namespace Naneau\FileGen\Test\Generator;
 
 use Naneau\FileGen\Structure;
@@ -19,13 +11,7 @@ use \RecursiveIteratorIterator;
 use \FilesystemIterator;
 
 /**
- * SymLinkTest
- *
  * Test symlink generation
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Tests
  */
 class SymLinkTest extends \Naneau\FileGen\Test\Generator\TestCase
 {

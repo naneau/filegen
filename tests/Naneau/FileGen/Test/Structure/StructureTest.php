@@ -1,12 +1,4 @@
 <?php
-/**
- * StructureTest.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Tests
- */
-
 namespace Naneau\FileGen\Test\Structure;
 
 use Naneau\FileGen\Structure;
@@ -14,13 +6,7 @@ use Naneau\FileGen\Directory;
 use Naneau\FileGen\File;
 
 /**
- * StructureTest
- *
  * Test structure generation
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Tests
  */
 class StructureTest extends \PHPUnit\Framework\TestCase
 {

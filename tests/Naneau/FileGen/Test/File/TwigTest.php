@@ -1,12 +1,4 @@
 <?php
-/**
- * TwigTest.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Test
- */
-
 namespace Naneau\FileGen\Test\File;
 
 use Naneau\FileGen\Structure;
@@ -16,13 +8,7 @@ use \Twig_Loader_Filesystem as TwigFileLoader;
 use \Twig_Environment as TwigEnvironment;
 
 /**
- * TwigTest
- *
  * testing twig
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Test
  */
 class TwigTest extends \Naneau\FileGen\Test\Generator\TestCase
 {

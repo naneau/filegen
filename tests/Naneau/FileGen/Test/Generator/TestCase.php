@@ -1,12 +1,4 @@
 <?php
-/**
- * TestCase.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Tests
- */
-
 namespace Naneau\FileGen\Test\Generator;
 
 use Naneau\FileGen\Directory;
@@ -18,13 +10,7 @@ use \RecursiveIteratorIterator;
 use \FilesystemIterator;
 
 /**
- * TestCase
- *
  * Base class for tests, sets up virtual file system
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Tests
  */
 class TestCase extends \PHPUnit\Framework\TestCase
 {

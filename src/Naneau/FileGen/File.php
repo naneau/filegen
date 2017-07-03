@@ -1,12 +1,4 @@
 <?php
-/**
- * File.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Node
- */
-
 namespace Naneau\FileGen;
 
 use Naneau\FileGen\Parameterized;
@@ -19,13 +11,7 @@ use Naneau\FileGen\File\Contents\StringBased as StringContents;
 use \InvalidArgumentException;
 
 /**
- * File
- *
  * A file
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Node
  */
 class File extends AccessRights
 {

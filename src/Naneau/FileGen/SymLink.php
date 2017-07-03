@@ -1,24 +1,10 @@
 <?php
-/**
- * SymLink.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Node
- */
-
 namespace Naneau\FileGen;
 
 use Naneau\FileGen\Node;
 
 /**
- * SymLink
- *
  * Description of symlink
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Node
  */
 class SymLink extends Node
 {

@@ -1,24 +1,10 @@
 <?php
-/**
- * StringBased.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      File
- */
-
 namespace Naneau\FileGen\File\Contents;
 
 use Naneau\FileGen\File\Contents;
 
 /**
- * StringBased
- *
  * String based file contents
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      File
  */
 class StringBased implements Contents
 {

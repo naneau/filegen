@@ -1,12 +1,4 @@
 <?php
-/**
- * Twig.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      File
- */
-
 namespace Naneau\FileGen\File\Contents;
 
 use Naneau\FileGen\File\Contents as FileContents;
@@ -15,13 +7,7 @@ use Naneau\FileGen\Parameterized;
 use \Twig_TemplateWrapper as TwigTemplate;
 
 /**
- * Twig
- *
  * Use twig to get the contents for a file
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      File
  */
 class Twig implements FileContents, Parameterized
 {

@@ -1,22 +1,8 @@
 <?php
-/**
- * Parameter.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Parameter
- */
-
 namespace Naneau\FileGen\Parameter;
 
 /**
- * Parameter
- *
  * A single parameter
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Parameter
  */
 class Parameter
 {
