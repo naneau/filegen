@@ -1,12 +1,4 @@
 <?php
-/**
- * ParameterHelper.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Console
- */
-
 namespace Naneau\FileGen\Console\Helper;
 
 use Naneau\FileGen\Structure;
@@ -21,13 +13,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
 
 /**
- * ParameterHelper
- *
  * Asks questions on the console
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Console
  */
 class ParameterHelper implements HelperInterface
 {

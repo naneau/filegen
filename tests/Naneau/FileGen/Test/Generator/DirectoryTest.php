@@ -1,15 +1,5 @@
 <?php
-/**
- * DirectoryTest.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Tests
- */
-
 namespace Naneau\FileGen\Test\Generator;
-
-use Naneau\FileGen\Test\Generator\TestCase;
 
 use Naneau\FileGen\Structure;
 use Naneau\FileGen\Directory;
@@ -17,15 +7,9 @@ use Naneau\FileGen\File;
 use Naneau\FileGen\Generator;
 
 /**
- * DirectoryTest
- *
  * Test directory structure generation
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Tests
  */
-class DirectoryTest extends TestCase
+class DirectoryTest extends \Naneau\FileGen\Test\Generator\TestCase
 {
     /**
      * Test simple creation

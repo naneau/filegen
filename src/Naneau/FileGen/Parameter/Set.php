@@ -1,12 +1,4 @@
 <?php
-/**
- * Set.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Parameter
- */
-
 namespace Naneau\FileGen\Parameter;
 
 use Naneau\FileGen\Exception as FileGenException;
@@ -14,13 +6,7 @@ use Naneau\FileGen\Exception as FileGenException;
 use \Iterator;
 
 /**
- * Set
- *
  * A set of parameters
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Parameter
  */
 class Set implements Iterator
 {

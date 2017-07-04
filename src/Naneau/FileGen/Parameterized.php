@@ -1,22 +1,8 @@
 <?php
-/**
- * Parameterized.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Parameters
- */
-
 namespace Naneau\FileGen;
 
 /**
- * Parameterized
- *
  * Parameterized class
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Parameters
  */
 interface Parameterized
 {

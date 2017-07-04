@@ -1,25 +1,10 @@
 <?php
-/**
- * AccessRights.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      AccessRights
- * @copyright       Copyright (c) 2014 Angry Bytes BV (http://www.angrybytes.com)
- */
-
 namespace Naneau\FileGen;
 
 use Naneau\FileGen\Node;
 
 /**
- * AccessRights
- *
  * Describes access rights for a file or directory
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      AccessRights
  */
 abstract class AccessRights extends Node
 {

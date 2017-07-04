@@ -1,12 +1,4 @@
 <?php
-/**
- * ParameterCommand.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Test
- */
-
 namespace Naneau\FileGen\Test\Console;
 
 use Naneau\FileGen\Structure;
@@ -16,14 +8,8 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * ParameterCommand
- *
  * A simple command that uses the filegenParameters helper to ask for
  * parameters for a supplied Structure
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Test
  */
 class ParameterCommand extends Command
 {

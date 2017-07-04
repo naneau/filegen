@@ -1,25 +1,11 @@
 <?php
-/**
- * Copy.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      File
- */
-
 namespace Naneau\FileGen\File\Contents;
 
 use Naneau\FileGen\File\Contents\Exception as ContentsException;
 use Naneau\FileGen\File\Contents;
 
 /**
- * Copy
- *
  * Contents for a file copied directly from another
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      File
  */
 class Copy implements Contents
 {

@@ -1,22 +1,8 @@
 <?php
-/**
- * Node.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Node
- */
-
 namespace Naneau\FileGen;
 
 /**
- * Node
- *
  * A node to be created
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Node
  */
 class Node
 {

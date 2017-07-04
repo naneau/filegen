@@ -1,12 +1,4 @@
 <?php
-/**
- * Directory.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Directory
- */
-
 namespace Naneau\FileGen;
 
 use Naneau\FileGen\Exception as FileGenException;
@@ -16,13 +8,7 @@ use Naneau\FileGen\AccessRights;
 use \Iterator;
 
 /**
- * Directory
- *
  * A directory, that can contain children (other directories, files, symlinks)
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Directory
  */
 class Directory extends AccessRights implements Iterator
 {

@@ -1,12 +1,4 @@
 <?php
-/**
- * Structure.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Node
- */
-
 namespace Naneau\FileGen;
 
 use Naneau\FileGen\Directory;
@@ -18,13 +10,7 @@ use Naneau\FileGen\Parameter\Set as ParameterSet;
 use Naneau\FileGen\Structure\Exception as StructureException;
 
 /**
- * Structure
- *
  * A structure
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Node
  */
 class Structure extends Directory
 {

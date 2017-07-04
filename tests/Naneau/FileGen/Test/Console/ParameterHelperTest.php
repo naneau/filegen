@@ -1,12 +1,4 @@
 <?php
-/**
- * ParameterHelperTest.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Test
- */
-
 namespace Naneau\FileGen\Test\Console;
 
 use Naneau\FileGen\Console\Helper\ParameterHelper;
@@ -21,18 +13,10 @@ use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Helper\HelperSet;
 use Symfony\Component\Console\Tester\CommandTester;
 
-use \PHPUnit_Framework_TestCase as PUTestCase;
-
 /**
- * ParameterHelperTest
- *
  * Testing the parameter helper
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Test
  */
-class ParameterHelperTest extends PUTestCase
+class ParameterHelperTest extends \PHPUnit\Framework\TestCase
 {
     public function testExecute()
     {

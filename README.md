@@ -61,7 +61,7 @@ use Naneau\FileGen\File\Contents\Twig;
 // $twig = ...
 
 // Load a template
-$template = $twig->loadTemplate('some_template.twig');
+$template = $twig->load('some_template.twig');
 
 // Parameters for the template
 $parameters = array('foo' => 'bar')
@@ -92,10 +92,10 @@ $structure
     ->param('bar', 'Please specify "bar"')
 
     // Can use {{ foo }} and {{ bar }}
-    ->file('someFile', new Twig($twig->loadTemplate('someFile.twig'));
+    ->file('someFile', new Twig($twig->load('someFile.twig'));
 
     // Can also use {{ foo }} and {{ bar }}
-    ->file('anotherFile', new Twig($twig->loadTemplate('anotherFile.twig'));
+    ->file('anotherFile', new Twig($twig->load('anotherFile.twig'));
 
 // Set a default value for foo
 $structure->getParameterDefinition()->get('foo')->setDefaultValue('Foo!');

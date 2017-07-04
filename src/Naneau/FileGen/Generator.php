@@ -1,12 +1,4 @@
 <?php
-/**
- * Generator.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Generator
- */
-
 namespace Naneau\FileGen;
 
 use Naneau\FileGen\Parameterized;
@@ -24,13 +16,7 @@ use Symfony\Component\Filesystem\Exception\IOException as FilesystemIOException;
 use \InvalidArgumentException;
 
 /**
- * Generator
- *
  * The generator takes directory structures and actually creates them on disk
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Generator
  */
 class Generator implements Parameterized
 {
@@ -196,11 +182,9 @@ class Generator implements Parameterized
         $contents = $file->getContents($this->getParameters());
 
         try {
+            $this->getFilesystem()->dumpFile($fullPath, $contents);
             if ($file->hasMode()) {
-                $mode = $file->getMode();
-                $this->getFilesystem()->dumpFile($fullPath, $contents, $mode);
-            } else {
-                $this->getFilesystem()->dumpFile($fullPath, $contents);
+                $this->getFilesystem()->chmod($fullPath, $file->getMode());
             }
         } catch (FilesystemIOException $filesystemException) {
             throw new GeneratorException(

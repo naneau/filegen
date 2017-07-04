@@ -1,15 +1,5 @@
 <?php
-/**
- * CopyTest.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Tests
- */
-
 namespace Naneau\FileGen\Test;
-
-use Naneau\FileGen\Test\Generator\TestCase;
 
 use Naneau\FileGen\File\Contents\Copy as CopyContents;
 use Naneau\FileGen\Structure;
@@ -17,15 +7,9 @@ use Naneau\FileGen\File;
 use Naneau\FileGen\Generator;
 
 /**
- * CopyTest
- *
  * Copying of files
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Tests
  */
-class CopyTest extends TestCase
+class CopyTest extends \Naneau\FileGen\Test\Generator\TestCase
 {
     /**
      * Test copying

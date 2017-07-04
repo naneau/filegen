@@ -1,15 +1,5 @@
 <?php
-/**
- * TwigTest.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Test
- */
-
 namespace Naneau\FileGen\Test\File;
-
-use Naneau\FileGen\Test\Generator\TestCase;
 
 use Naneau\FileGen\Structure;
 use Naneau\FileGen\File\Contents\Twig as TwigContents;
@@ -18,15 +8,9 @@ use \Twig_Loader_Filesystem as TwigFileLoader;
 use \Twig_Environment as TwigEnvironment;
 
 /**
- * TwigTest
- *
  * testing twig
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Test
  */
-class TwigTest extends TestCase
+class TwigTest extends \Naneau\FileGen\Test\Generator\TestCase
 {
     /**
      * Simple render
@@ -39,7 +23,7 @@ class TwigTest extends TestCase
 
         $structure = new Structure;
         $structure->file('foo', new TwigContents(
-            $this->createTwig()->loadTemplate('template_one.twig')
+            $this->createTwig()->load('template_one.twig')
         ));
 
         $generator->generate($structure);
@@ -62,7 +46,7 @@ class TwigTest extends TestCase
 
         $structure = new Structure;
         $structure->file('foo', new TwigContents(
-            $this->createTwig()->loadTemplate('template_two.twig'),
+            $this->createTwig()->load('template_two.twig'),
             array(
                 'foo' => 'foo',
                 'bar' => 'bar',
@@ -89,7 +73,7 @@ class TwigTest extends TestCase
         $structure = new Structure;
         $structure
             ->file('foo', new TwigContents(
-                $this->createTwig()->loadTemplate('template_two.twig')
+                $this->createTwig()->load('template_two.twig')
             ));
 
         $generator = $this->createGenerator(array(
@@ -117,7 +101,7 @@ class TwigTest extends TestCase
 
         $structure = new Structure;
         $structure->file('foo', new TwigContents(
-            $this->createTwig()->loadTemplate('template_two.twig'),
+            $this->createTwig()->load('template_two.twig'),
             array(
                 'foo' => 'foo',
                 'baz' => 'baz'

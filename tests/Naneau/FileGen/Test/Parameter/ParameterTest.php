@@ -1,27 +1,10 @@
 <?php
-/**
- * ParameterTest.php
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Tests
- */
-
 namespace Naneau\FileGen\Test\Parameter;
 
 use Naneau\FileGen\Parameter\Set as ParameterSet;
 use Naneau\FileGen\Parameter\Parameter;
 
-use \PHPUnit_Framework_TestCase as PUTestCase;
-
-/**
- * ParameterTest
- *
- * @category        Naneau
- * @package         FileGen
- * @subpackage      Tests
- */
-class ParameterTest extends PUTestCase
+class ParameterTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * Test description constructor
