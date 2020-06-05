@@ -1,5 +1,5 @@
 <?php
-namespace Naneau\FileGen\Test;
+namespace Naneau\FileGen\Test\File;
 
 use Naneau\FileGen\File\Contents\Copy as CopyContents;
 use Naneau\FileGen\Structure;
