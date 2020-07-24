@@ -24,8 +24,8 @@ class SymLinkTest extends \Naneau\FileGen\Test\Generator\TestCase
         $generator->generate($structure);
 
         // See if structure was generated
-        $this->assertEquals(
-            file_get_contents($generator->getRoot() . '/bar'),
+        self::assertStringEqualsFile(
+            $generator->getRoot() . '/bar',
             'foo contents'
         );
     }

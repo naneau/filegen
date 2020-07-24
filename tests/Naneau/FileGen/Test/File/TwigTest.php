@@ -29,8 +29,8 @@ class TwigTest extends \Naneau\FileGen\Test\Generator\TestCase
         $generator->generate($structure);
 
         // See if structure was generated
-        $this->assertEquals(
-            file_get_contents($generator->getRoot() . '/foo'),
+        self::assertStringEqualsFile(
+            $generator->getRoot() . '/foo',
             "foo bar baz\n" // Twig generates a newline at EOF...
         );
     }
@@ -57,8 +57,8 @@ class TwigTest extends \Naneau\FileGen\Test\Generator\TestCase
         $generator->generate($structure);
 
         // See if structure was generated
-        $this->assertEquals(
-            file_get_contents($generator->getRoot() . '/foo'),
+        self::assertStringEqualsFile(
+            $generator->getRoot() . '/foo',
             "foo bar baz\n" // Twig generates a newline at EOF...
         );
     }
@@ -84,8 +84,8 @@ class TwigTest extends \Naneau\FileGen\Test\Generator\TestCase
         $generator->generate($structure);
 
         // See if structure was generated
-        $this->assertEquals(
-            file_get_contents($generator->getRoot() . '/foo'),
+        self::assertStringEqualsFile(
+            $generator->getRoot() . '/foo',
             "foo bar baz\n" // Twig generates a newline at EOF...
         );
     }
@@ -111,8 +111,8 @@ class TwigTest extends \Naneau\FileGen\Test\Generator\TestCase
         $generator->generate($structure);
 
         // See if structure was generated
-        $this->assertEquals(
-            file_get_contents($generator->getRoot() . '/foo'),
+        self::assertStringEqualsFile(
+            $generator->getRoot() . '/foo',
             "foo  baz\n" // Twig generates a newline at EOF...
         );
     }

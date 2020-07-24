@@ -13,11 +13,11 @@ class ParameterTest extends \PHPUnit\Framework\TestCase
     public function testConstructDescription()
     {
         $param = new Parameter('foo', 'bar');
-        $this->assertEquals(
+        self::assertEquals(
             'foo',
             $param->getName()
         );
-        $this->assertEquals(
+        self::assertEquals(
             'bar',
             $param->getDescription()
         );
@@ -31,8 +31,8 @@ class ParameterTest extends \PHPUnit\Framework\TestCase
     public function testConstructWithoutDescription()
     {
         $param = new Parameter('foo');
-        $this->assertEquals('foo', $param->getName());
-        $this->assertEquals('foo', $param->getDescription());
+        self::assertEquals('foo', $param->getName());
+        self::assertEquals('foo', $param->getDescription());
     }
 
     /**
@@ -43,7 +43,7 @@ class ParameterTest extends \PHPUnit\Framework\TestCase
     public function testNoDefaultValue()
     {
         $param = new Parameter('foo');
-        $this->assertFalse($param->hasDefaultValue());
+        self::assertFalse($param->hasDefaultValue());
     }
 
     /**
@@ -56,8 +56,8 @@ class ParameterTest extends \PHPUnit\Framework\TestCase
         $param = new Parameter('foo');
         $param->setDefaultValue('bar');
 
-        $this->assertTrue($param->hasDefaultValue());
-        $this->assertEquals('bar', $param->getDefaultValue());
+        self::assertTrue($param->hasDefaultValue());
+        self::assertEquals('bar', $param->getDefaultValue());
     }
 
     /**
@@ -70,7 +70,7 @@ class ParameterTest extends \PHPUnit\Framework\TestCase
         $param = new Parameter('foo');
         $param->setDefaultValue(null);
 
-        $this->assertTrue($param->hasDefaultValue());
-        $this->assertEquals(null, $param->getDefaultValue());
+        self::assertTrue($param->hasDefaultValue());
+        self::assertEquals(null, $param->getDefaultValue());
     }
 }

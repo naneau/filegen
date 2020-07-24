@@ -41,20 +41,20 @@ class ParameterHelperTest extends \PHPUnit\Framework\TestCase
             'command' => $command->getName())
         );
 
-        $this->assertEquals(
+        self::assertEquals(
             'foo descriptionbar descriptionbaz description',
             $commandTester->getDisplay()
         );
 
         $received = $command->getReceived();
 
-        $this->assertArrayHasKey('foo', $received);
-        $this->assertEquals('FooValue', $received['foo']);
+        self::assertArrayHasKey('foo', $received);
+        self::assertEquals('FooValue', $received['foo']);
 
-        $this->assertArrayHasKey('bar', $received);
-        $this->assertEquals('BarValue', $received['bar']);
+        self::assertArrayHasKey('bar', $received);
+        self::assertEquals('BarValue', $received['bar']);
 
-        $this->assertArrayHasKey('baz', $received);
-        $this->assertEquals('BazValue', $received['baz']);
+        self::assertArrayHasKey('baz', $received);
+        self::assertEquals('BazValue', $received['baz']);
     }
 }

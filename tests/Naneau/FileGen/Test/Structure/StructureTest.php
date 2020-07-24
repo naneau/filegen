@@ -2,6 +2,10 @@
 namespace Naneau\FileGen\Test\Structure;
 
 use Naneau\FileGen\Structure;
+use Naneau\FileGen\Directory;
+use Naneau\FileGen\File;
+use Naneau\FileGen\SymLink;
+use Naneau\FileGen\Parameter\Parameter;
 
 /**
  * Test structure generation
@@ -23,24 +27,24 @@ class StructureTest extends \PHPUnit\Framework\TestCase
             ->link('/from/this/file', 'to/this')
             ->link('/from/another/file', '/to/that');
 
-        $this->assertInstanceOf(
-            'Naneau\FileGen\Directory',
+        self::assertInstanceOf(
+            Directory::class,
             $structure->scan('foo')
         );
-        $this->assertInstanceOf(
-            'Naneau\FileGen\Directory',
+        self::assertInstanceOf(
+            Directory::class,
             $structure->scan('bar')
         );
-        $this->assertInstanceOf(
-            'Naneau\FileGen\File',
+        self::assertInstanceOf(
+            File::class,
             $structure->scan('foo/bar')
         );
-        $this->assertInstanceOf(
-            'Naneau\FileGen\SymLink',
+        self::assertInstanceOf(
+            SymLink::class,
             $structure->scan('to/this')
         );
-        $this->assertInstanceOf(
-            'Naneau\FileGen\SymLink',
+        self::assertInstanceOf(
+            SymLink::class,
             $structure->scan('to/that')
         );
     }
@@ -48,11 +52,12 @@ class StructureTest extends \PHPUnit\Framework\TestCase
     /**
      * test invalid structure
      *
-     * @expectedException \Naneau\FileGen\Structure\Exception
      * @return void
      **/
     public function testDirectoryFileMix()
     {
+        $this->expectException(\Naneau\FileGen\Structure\Exception::class);
+
         // Can't add file under a node that's a file already
         $structure = new Structure;
         $structure
@@ -76,20 +81,20 @@ class StructureTest extends \PHPUnit\Framework\TestCase
             ->parameter('foo', 'The foo parameter')
             ->parameter('bar', 'The bar parameter');
 
-        $this->assertInstanceOf(
-            'Naneau\FileGen\Directory',
+        self::assertInstanceOf(
+            Directory::class,
             $structure->scan('foo')
         );
-        $this->assertInstanceOf(
-            'Naneau\FileGen\File',
+        self::assertInstanceOf(
+            File::class,
             $structure->scan('bar')
         );
-        $this->assertInstanceOf(
-            'Naneau\FileGen\Parameter\Parameter',
+        self::assertInstanceOf(
+            Parameter::class,
             $structure->getParameterDefinition()->get('foo')
         );
-        $this->assertInstanceOf(
-            'Naneau\FileGen\Parameter\Parameter',
+        self::assertInstanceOf(
+            Parameter::class,
             $structure->getParameterDefinition()->get('bar')
         );
     }
