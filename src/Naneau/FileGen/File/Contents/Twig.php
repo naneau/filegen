@@ -4,7 +4,7 @@ namespace Naneau\FileGen\File\Contents;
 use Naneau\FileGen\File\Contents as FileContents;
 use Naneau\FileGen\Parameterized;
 
-use \Twig_TemplateWrapper as TwigTemplate;
+use Twig\TemplateWrapper as TwigTemplate;
 
 /**
  * Use twig to get the contents for a file

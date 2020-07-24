@@ -4,8 +4,8 @@ namespace Naneau\FileGen\Test\File;
 use Naneau\FileGen\Structure;
 use Naneau\FileGen\File\Contents\Twig as TwigContents;
 
-use \Twig_Loader_Filesystem as TwigFileLoader;
-use \Twig_Environment as TwigEnvironment;
+use Twig\Loader\FilesystemLoader as TwigFileLoader;
+use Twig\Environment as TwigEnvironment;
 
 /**
  * testing twig
