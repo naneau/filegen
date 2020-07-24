@@ -1,7 +1,6 @@
 <?php
 namespace Naneau\FileGen\Test\Parameter;
 
-use Naneau\FileGen\Parameter\Set as ParameterSet;
 use Naneau\FileGen\Parameter\Parameter;
 
 class ParameterTest extends \PHPUnit\Framework\TestCase

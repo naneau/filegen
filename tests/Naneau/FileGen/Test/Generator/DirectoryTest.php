@@ -2,9 +2,6 @@
 namespace Naneau\FileGen\Test\Generator;
 
 use Naneau\FileGen\Structure;
-use Naneau\FileGen\Directory;
-use Naneau\FileGen\File;
-use Naneau\FileGen\Generator;
 
 /**
  * Test directory structure generation
@@ -162,7 +159,7 @@ class DirectoryTest extends \Naneau\FileGen\Test\Generator\TestCase
     /**
      * Test already exists
      *
-     * @expectedException Naneau\FileGen\Generator\Exception\NodeExists
+     * @expectedException \Naneau\FileGen\Generator\Exception\NodeExists
      *
      * @return void
      **/

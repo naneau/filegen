@@ -2,8 +2,6 @@
 namespace Naneau\FileGen\Test\Generator;
 
 use Naneau\FileGen\Structure;
-use Naneau\FileGen\File;
-use Naneau\FileGen\Generator;
 
 /**
  * Test file generation
@@ -54,7 +52,7 @@ class FileTest extends \Naneau\FileGen\Test\Generator\TestCase
     /**
      * Test already exists
      *
-     * @expectedException Naneau\FileGen\Generator\Exception\NodeExists
+     * @expectedException \Naneau\FileGen\Generator\Exception\NodeExists
      *
      * @return void
      **/

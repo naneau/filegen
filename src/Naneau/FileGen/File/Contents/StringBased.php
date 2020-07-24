@@ -3,6 +3,8 @@ namespace Naneau\FileGen\File\Contents;
 
 use Naneau\FileGen\File\Contents;
 
+use Naneau\FileGen\File\Contents as ContentGenerator;
+
 /**
  * String based file contents
  */

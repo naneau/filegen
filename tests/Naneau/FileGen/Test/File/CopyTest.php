@@ -1,10 +1,8 @@
 <?php
-namespace Naneau\FileGen\Test;
+namespace Naneau\FileGen\Test\File;
 
 use Naneau\FileGen\File\Contents\Copy as CopyContents;
 use Naneau\FileGen\Structure;
-use Naneau\FileGen\File;
-use Naneau\FileGen\Generator;
 
 /**
  * Copying of files
@@ -44,7 +42,7 @@ class CopyTest extends \Naneau\FileGen\Test\Generator\TestCase
     /**
      * Test copy fail
      *
-     * @expectedException Naneau\FileGen\File\Contents\Exception
+     * @expectedException \Naneau\FileGen\File\Contents\Exception
      * @return void
      **/
     public function testNotExists()
@@ -65,7 +63,7 @@ class CopyTest extends \Naneau\FileGen\Test\Generator\TestCase
     /**
      * Test copy fail
      *
-     * @expectedException Naneau\FileGen\File\Contents\Exception
+     * @expectedException \Naneau\FileGen\File\Contents\Exception
      * @return void
      **/
     public function testNotReadable()

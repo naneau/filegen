@@ -1,9 +1,7 @@
 <?php
 namespace Naneau\FileGen;
 
-use Naneau\FileGen\Directory;
-use Naneau\FileGen\File;
-use Naneau\FileGen\SymLink;
+use Naneau\FileGen\File\Contents as FileContents;
 
 use Naneau\FileGen\Parameter\Set as ParameterSet;
 

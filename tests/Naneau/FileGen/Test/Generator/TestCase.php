@@ -1,8 +1,6 @@
 <?php
 namespace Naneau\FileGen\Test\Generator;
 
-use Naneau\FileGen\Directory;
-use Naneau\FileGen\File;
 use Naneau\FileGen\Generator;
 
 use \RecursiveDirectoryIterator;

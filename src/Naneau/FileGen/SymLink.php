@@ -1,8 +1,6 @@
 <?php
 namespace Naneau\FileGen;
 
-use Naneau\FileGen\Node;
-
 /**
  * Description of symlink
  */

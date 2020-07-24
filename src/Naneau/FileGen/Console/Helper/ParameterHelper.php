@@ -6,7 +6,6 @@ use Naneau\FileGen\Parameter\Parameter;
 
 use Symfony\Component\Console\Helper\HelperInterface;
 use Symfony\Component\Console\Helper\HelperSet;
-use Symfony\Component\Console\Helper\QuestionHelper;
 
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -97,7 +96,7 @@ class ParameterHelper implements HelperInterface
     /**
      * Get the question helper
      *
-     * @return QuestionHelper
+     * @return HelperInterface
      **/
     private function getQuestionHelper()
     {

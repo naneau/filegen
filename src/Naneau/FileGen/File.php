@@ -1,10 +1,6 @@
 <?php
 namespace Naneau\FileGen;
 
-use Naneau\FileGen\Parameterized;
-
-use Naneau\FileGen\AccessRights;
-
 use Naneau\FileGen\File\Contents as ContentGenerator;
 use Naneau\FileGen\File\Contents\StringBased as StringContents;
 

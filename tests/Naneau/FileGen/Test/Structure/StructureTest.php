@@ -2,8 +2,6 @@
 namespace Naneau\FileGen\Test\Structure;
 
 use Naneau\FileGen\Structure;
-use Naneau\FileGen\Directory;
-use Naneau\FileGen\File;
 
 /**
  * Test structure generation
@@ -50,7 +48,7 @@ class StructureTest extends \PHPUnit\Framework\TestCase
     /**
      * test invalid structure
      *
-     * @expectedException Naneau\FileGen\Structure\Exception
+     * @expectedException \Naneau\FileGen\Structure\Exception
      * @return void
      **/
     public function testDirectoryFileMix()

@@ -1,12 +1,6 @@
 <?php
 namespace Naneau\FileGen;
 
-use Naneau\FileGen\Parameterized;
-
-use Naneau\FileGen\Directory;
-use Naneau\FileGen\File;
-use Naneau\FileGen\SymLink;
-
 use Naneau\FileGen\Generator\Exception as GeneratorException;
 use Naneau\FileGen\Generator\Exception\NodeExists as NodeExistsException;
 
@@ -59,7 +53,7 @@ class Generator implements Parameterized
     /**
      * Generate a Structure on disk
      *
-     * @param  Structure $directory
+     * @param  Structure $structure
      * @return bool
      **/
     public function generate(Structure $structure)

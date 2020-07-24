@@ -2,7 +2,6 @@
 namespace Naneau\FileGen\Test\Parameter;
 
 use Naneau\FileGen\Parameter\Set as ParameterSet;
-use Naneau\FileGen\Parameter\Parameter;
 
 class SetTest extends \PHPUnit\Framework\TestCase
 {
@@ -31,7 +30,7 @@ class SetTest extends \PHPUnit\Framework\TestCase
     /**
      * Test get of param that's absent
      *
-     * @expectedException Naneau\FileGen\Exception
+     * @expectedException \Naneau\FileGen\Exception
      * @return void
      **/
     public function testGetNonExisting()

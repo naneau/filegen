@@ -5,12 +5,8 @@ use Naneau\FileGen\Console\Helper\ParameterHelper;
 
 use Naneau\FileGen\Structure;
 
-use Naneau\FileGen\Test\Console\ParameterCommand;
-
 use Symfony\Component\Console\Application;
 
-use Symfony\Component\Console\Helper\QuestionHelper;
-use Symfony\Component\Console\Helper\HelperSet;
 use Symfony\Component\Console\Tester\CommandTester;
 
 /**

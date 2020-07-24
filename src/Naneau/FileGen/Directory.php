@@ -3,8 +3,6 @@ namespace Naneau\FileGen;
 
 use Naneau\FileGen\Exception as FileGenException;
 
-use Naneau\FileGen\AccessRights;
-
 use \Iterator;
 
 /**
