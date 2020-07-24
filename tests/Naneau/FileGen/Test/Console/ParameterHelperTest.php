@@ -39,10 +39,7 @@ class ParameterHelperTest extends \PHPUnit\Framework\TestCase
         $commandTester = new CommandTester($command);
 
         // Set the input stream
-        $helper = $command->getHelper('question');
-        $helper->setInputStream(
-            $this->getInputStream("FooValue\nBarValue\n\n")
-        );
+        $commandTester->setInputs(['FooValue', 'BarValue']);
 
         $commandTester->execute(array(
             'command' => $command->getName())
@@ -63,20 +60,5 @@ class ParameterHelperTest extends \PHPUnit\Framework\TestCase
 
         $this->assertArrayHasKey('baz', $received);
         $this->assertEquals('BazValue', $received['baz']);
-    }
-
-    /**
-     * Get input stream
-     *
-     * @param string $input
-     * @return resource
-     **/
-    protected function getInputStream($input)
-    {
-        $stream = fopen('php://memory', 'r+', false);
-        fputs($stream, $input);
-        rewind($stream);
-
-        return $stream;
     }
 }
