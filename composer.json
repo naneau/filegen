@@ -21,7 +21,7 @@
     },
     "require-dev": {
         "twig/twig": "~2",
-        "phpunit/phpunit": "~9",
+        "phpunit/phpunit": "~8",
         "symfony/console": "~4"
     },
     "suggest": {
