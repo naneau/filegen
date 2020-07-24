@@ -24,7 +24,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
      *
      * @return void
      **/
-    public function setUp()
+    public function setUp(): void
     {
         $dir = sys_get_temp_dir() . '/naneau-file-gen-tests';
 
@@ -36,7 +36,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
         $this->setRootDir($dir);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         self::deleteDir($this->getRootDir());
     }

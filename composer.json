@@ -16,11 +16,12 @@
     },
     "minimum-stability": "stable",
     "require": {
+        "php": "7.2.* || 7.3.* || 7.4.*",
         "symfony/filesystem": "~4"
     },
     "require-dev": {
         "twig/twig": "~2",
-        "phpunit/phpunit": "~6",
+        "phpunit/phpunit": "~9",
         "symfony/console": "~4"
     },
     "suggest": {
